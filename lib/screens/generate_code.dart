@@ -81,7 +81,7 @@ class _GenerateCodeState extends State<GenerateCode> {
             ),
           ],
         ),
-        const SizedBox(height: 30),
+        // const SizedBox(height: 30),
         // Text(
         //   'Recovery Phrase',
         //   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
@@ -89,23 +89,23 @@ class _GenerateCodeState extends State<GenerateCode> {
         //       ),
         // ),
         // const SizedBox(height: 4),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(
-                width: MediaQuery.of(context).size.width * 0.8,
-                child: SelectableText(recoveryPhrase)),
-            GestureDetector(
-              onTap: () {
-                Clipboard.setData(ClipboardData(text: recoveryPhrase));
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('copied recovery phrase!')),
-                );
-              },
-              child: const Icon(Icons.copy),
-            ),
-          ],
-        ),
+        // Row(
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //   children: [
+        //     SizedBox(
+        //         width: MediaQuery.of(context).size.width * 0.8,
+        //         child: SelectableText(recoveryPhrase)),
+        //     GestureDetector(
+        //       onTap: () {
+        //         Clipboard.setData(ClipboardData(text: recoveryPhrase));
+        //         ScaffoldMessenger.of(context).showSnackBar(
+        //           const SnackBar(content: Text('copied recovery phrase!')),
+        //         );
+        //       },
+        //       child: const Icon(Icons.copy),
+        //     ),
+        //   ],
+        // ),
         const SizedBox(height: 30),
         Padding(
             padding: const EdgeInsets.all(35),
