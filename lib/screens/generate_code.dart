@@ -50,7 +50,7 @@ class _GenerateCodeState extends State<GenerateCode> {
       children: [
         const Text('Scan Code from Authenticator'),
         const SizedBox(height: 20),
-        QrImage(
+        QrImageView(
           data:
               'otpauth://totp/${widget.appName}:${widget.email}?secret=$secKey&issuer=${widget.appName}&algorithm=SHA1',
           version: QrVersions.auto,
@@ -82,13 +82,13 @@ class _GenerateCodeState extends State<GenerateCode> {
           ],
         ),
         const SizedBox(height: 30),
-        Text(
-          'Recovery Phrase',
-          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                fontWeight: FontWeight.bold,
-              ),
-        ),
-        const SizedBox(height: 4),
+        // Text(
+        //   'Recovery Phrase',
+        //   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+        //         fontWeight: FontWeight.bold,
+        //       ),
+        // ),
+        // const SizedBox(height: 4),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
